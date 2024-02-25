@@ -7,10 +7,10 @@ url="https://github.com/tsoding/boomer"
 license=('MIT')
 
 depends=(
-	'mesa'
-	'libx11'
-	'libxext'
-	'libxrandr'
+    'mesa'
+    'libx11'
+    'libxext'
+    'libxrandr'
 )
 makedepends=('git' 'nimble')
 provides=("${pkgname%-git}")
@@ -20,18 +20,18 @@ source=("boomer::git+https://github.com/tsoding/boomer.git")
 md5sums=('SKIP')
 
 pkgver() {
-	cd "$srcdir/${pkgname%-git}"
-	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    cd "$srcdir/${pkgname%-git}"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
-	cd "$srcdir/${pkgname%-git}"
-	nimble -y install
+    cd "$srcdir/${pkgname%-git}"
+    nimble -y install
 }
 
 build() {
-	cd "$srcdir/${pkgname%-git}"
-	nimble -y build
+    cd "$srcdir/${pkgname%-git}"
+    nimble -y build
 }
 
 package() {
