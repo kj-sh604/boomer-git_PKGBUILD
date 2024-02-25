@@ -1,4 +1,3 @@
-# Maintainer: Øystein Tveit <h7x4abk3g@protonmail.com>
 pkgname='boomer-git'
 pkgver=r291.dfd4e1f
 pkgrel=1
