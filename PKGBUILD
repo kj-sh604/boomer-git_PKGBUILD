@@ -35,7 +35,7 @@ build() {
 }
 
 package() {
-	cd "$srcdir/${pkgname%-git}"
+    cd "$srcdir/${pkgname%-git}"
     install -Dm755 ./boomer "$pkgdir/usr/bin/boomer"
     install -Dm644 ./demo.gif "$pkgdir/usr/share/doc/$pkgname"
     install -Dm644 ./README.md "$pkgdir/usr/share/doc/$pkgname"
